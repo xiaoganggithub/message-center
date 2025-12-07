@@ -1,6 +1,6 @@
 package com.message.center.interfaces.dubbo.impl;
 
-import com.apache.dubbo.config.annotation.DubboService;
+import org.apache.dubbo.config.annotation.DubboService;
 import com.message.center.application.service.MessageSendApplicationService;
 import com.message.center.domain.vo.Message;
 import com.message.center.domain.vo.SendResult;

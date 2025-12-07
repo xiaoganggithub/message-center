@@ -4,8 +4,8 @@ import com.message.center.domain.entity.Message;
 import com.message.center.domain.enums.MessageStatus;
 import com.message.center.domain.vo.MessageContext;
 import com.message.center.domain.vo.HandlerResult;
-import com.message.center.repository.MessageRepository;
-import com.message.center.repository.ChannelTaskRepository;
+import com.message.center.domain.repository.MessageRepository;
+import com.message.center.domain.repository.ChannelTaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

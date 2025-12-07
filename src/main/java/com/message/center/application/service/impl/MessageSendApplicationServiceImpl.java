@@ -2,7 +2,6 @@ package com.message.center.application.service.impl;
 
 import com.alibaba.fastjson2.JSON;
 import com.message.center.application.service.MessageSendApplicationService;
-import com.message.center.domain.entity.Message as DbMessage;
 import com.message.center.domain.service.MessageDomainService;
 import com.message.center.domain.vo.MessageContext;
 import com.message.center.domain.vo.Message;
@@ -90,8 +89,8 @@ public class MessageSendApplicationServiceImpl implements MessageSendApplication
      * @param message VO对象
      * @return 数据库实体
      */
-    private DbMessage convertToDbMessage(Message message) {
-        DbMessage dbMessage = new DbMessage();
+    private com.message.center.domain.entity.Message convertToDbMessage(Message message) {
+        com.message.center.domain.entity.Message dbMessage = new com.message.center.domain.entity.Message();
         dbMessage.setMessageId(message.getMessageId());
         dbMessage.setTenantId(message.getTenantId());
         dbMessage.setStoreId(message.getStoreId());

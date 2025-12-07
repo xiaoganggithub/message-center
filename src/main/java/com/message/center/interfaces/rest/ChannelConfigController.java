@@ -1,7 +1,7 @@
 package com.message.center.interfaces.rest;
 
 import com.message.center.domain.entity.ChannelConfig;
-import com.message.center.service.api.ChannelConfigService;
+import com.message.center.interfaces.dubbo.api.ChannelConfigService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

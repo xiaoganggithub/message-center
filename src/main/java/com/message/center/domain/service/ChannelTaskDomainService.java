@@ -38,4 +38,5 @@ public interface ChannelTaskDomainService {
      * @param messageId 消息ID
      * @return 渠道任务列表
      */
-    List<
+    List<ChannelTask> getChannelTasksByMessageId(String messageId);
+}

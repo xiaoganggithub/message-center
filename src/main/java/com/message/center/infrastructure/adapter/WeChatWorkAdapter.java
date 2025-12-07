@@ -6,7 +6,7 @@ import com.alibaba.fastjson2.JSONObject;
 import com.message.center.domain.entity.ChannelTask;
 import com.message.center.domain.enums.ChannelType;
 import com.message.center.domain.vo.SendResult;
-import com.message.center.repository.ChannelConfigRepository;
+import com.message.center.domain.repository.ChannelConfigRepository;
 import com.message.center.domain.entity.ChannelConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

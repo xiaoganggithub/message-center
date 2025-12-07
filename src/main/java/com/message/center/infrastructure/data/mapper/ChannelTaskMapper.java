@@ -1,10 +1,6 @@
 package com.message.center.infrastructure.data.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
-import com.baomidou.mybatisplus.annotation.Insert;
-import com.baomidou.mybatisplus.annotation.Update;
 import com.message.center.domain.entity.ChannelTask;
 import com.message.center.domain.enums.TaskStatus;
 import org.apache.ibatis.annotations.Param;

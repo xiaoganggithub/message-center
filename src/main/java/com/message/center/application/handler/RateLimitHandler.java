@@ -5,7 +5,7 @@ import com.message.center.domain.enums.ChannelType;
 import com.message.center.domain.enums.TimeUnitEnum;
 import com.message.center.domain.vo.MessageContext;
 import com.message.center.domain.vo.HandlerResult;
-import com.message.center.service.api.ChannelConfigService;
+import com.message.center.interfaces.dubbo.api.ChannelConfigService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;

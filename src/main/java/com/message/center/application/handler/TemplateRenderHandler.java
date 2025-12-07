@@ -4,7 +4,7 @@ import com.message.center.domain.enums.ChannelType;
 import com.message.center.domain.entity.MessageTemplate;
 import com.message.center.domain.vo.MessageContext;
 import com.message.center.domain.vo.HandlerResult;
-import com.message.center.service.api.MessageTemplateService;
+import com.message.center.interfaces.dubbo.api.MessageTemplateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

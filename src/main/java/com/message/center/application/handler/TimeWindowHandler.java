@@ -3,7 +3,7 @@ package com.message.center.application.handler;
 import com.message.center.domain.entity.ChannelConfig;
 import com.message.center.domain.vo.MessageContext;
 import com.message.center.domain.vo.HandlerResult;
-import com.message.center.repository.ChannelConfigRepository;
+import com.message.center.domain.repository.ChannelConfigRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

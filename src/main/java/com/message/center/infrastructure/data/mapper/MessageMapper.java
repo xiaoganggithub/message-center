@@ -1,12 +1,6 @@
 package com.message.center.infrastructure.data.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
-import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
-import com.baomidou.mybatisplus.core.toolkit.Constants;
-import com.baomidou.mybatisplus.annotation.Select;
-import com.baomidou.mybatisplus.annotation.Update;
 import com.message.center.domain.entity.Message;
 import com.message.center.domain.enums.MessageStatus;
 import org.apache.ibatis.annotations.Param;
@@ -46,7 +40,7 @@ public interface MessageMapper extends BaseMapper<Message> {
      * @param failedChannels 失败渠道数
      * @return 更新结果
      */
-    @Update("UPDATE msg_message " +
+    @org.apache.ibatis.annotations.Update("UPDATE msg_message " +
             "SET success_channels = #{successChannels}, " +
             "failed_channels = #{failedChannels}, " +
             "update_time = NOW()," +

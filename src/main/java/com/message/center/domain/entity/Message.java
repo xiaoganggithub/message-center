@@ -26,7 +26,7 @@ public class Message implements Serializable {
     /**
      * 消息唯一ID
      */
-    @TableField(value = "message_id", unique = true, insertStrategy = FieldStrategy.NOT_EMPTY)
+    @TableField(value = "message_id", insertStrategy = FieldStrategy.NOT_EMPTY)
     private String messageId;
 
     /**
