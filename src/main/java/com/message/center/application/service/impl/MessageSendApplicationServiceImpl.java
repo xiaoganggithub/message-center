@@ -38,7 +38,7 @@ public class MessageSendApplicationServiceImpl implements MessageSendApplication
             message.setMessageId(messageId);
 
             // 2. 保存消息到数据库
-            DbMessage dbMessage = convertToDbMessage(message);
+            com.message.center.domain.entity.Message dbMessage = convertToDbMessage(message);
             messageDomainService.createMessage(dbMessage);
 
             // 3. 执行责任链处理

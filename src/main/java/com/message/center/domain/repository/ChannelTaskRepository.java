@@ -18,6 +18,13 @@ public interface ChannelTaskRepository {
     boolean batchSave(List<ChannelTask> tasks);
 
     /**
+     * 批量保存渠道任务（别名方法）
+     * @param tasks 渠道任务列表
+     * @return 是否保存成功
+     */
+    boolean saveBatch(List<ChannelTask> tasks);
+
+    /**
      * 更新渠道任务状态
      * @param taskId 任务ID
      * @param status 任务状态

@@ -63,7 +63,7 @@ public class ChannelTaskExecutor {
         try {
             // 更新状态为发送中
             task.setStatus(TaskStatus.SENDING);
-            taskRepository.updateStatus(task);
+            taskRepository.updateStatus(String.valueOf(task.getId()), TaskStatus.SENDING, "发送中");
 
             // 获取对应的渠道适配器
             ChannelAdapter adapter = adapterMap.get(task.getChannelType());
@@ -79,16 +79,13 @@ public class ChannelTaskExecutor {
                 task.setStatus(TaskStatus.SUCCESS);
                 task.setResultMessage("发送成功");
                 task.setFinishTime(LocalDateTime.now());
+                taskRepository.updateStatus(String.valueOf(task.getId()), TaskStatus.SUCCESS, "发送成功");
             } else {
                 handleFailure(task, result.getErrorMessage());
             }
         } catch (Exception e) {
             // 异常处理 - 不影响其他渠道
             handleFailure(task, e.getMessage());
-        } finally {
-            // 更新任务
-            task.setUpdateTime(LocalDateTime.now());
-            taskRepository.updateStatus(task);
         }
     }
 
@@ -107,9 +104,11 @@ public class ChannelTaskExecutor {
             // 计算下次重试时间（指数退避）
             int delay = (int) Math.pow(2, task.getRetryCount()) * 60;
             task.setNextRetryTime(LocalDateTime.now().plusSeconds(delay));
+            taskRepository.updateStatus(String.valueOf(task.getId()), TaskStatus.RETRY, errorMessage);
         } else {
             task.setStatus(TaskStatus.FAILED);
             task.setFinishTime(LocalDateTime.now());
+            taskRepository.updateStatus(String.valueOf(task.getId()), TaskStatus.FAILED, errorMessage);
         }
     }
 }
